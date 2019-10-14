@@ -1,0 +1,26 @@
+/*1. p {
+    color: red;
+} */
+
+/*2. #second {
+    background-color: #00FF00;
+} */
+
+/*3. p,h2 {
+    font-size: 24px;
+} */
+
+/*6. [target="_blank"]{
+    color: yellow;
+} */
+
+/*7. ul li{
+    font-weight: bold;
+} */
+
+.item > span {
+    font-size : 18px 
+}
+.item > div span {
+    font-style: italic
+}
