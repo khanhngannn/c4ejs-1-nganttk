@@ -26,10 +26,24 @@ const timeSheetData = [
 const tbBody = document.getElementById('ts_tbody');
 console.log(timeSheetData);
 console.log(tbBody);
-console.log(timeSheetData[0].project);
+// console.log(timeSheetData[0].project);
+const btn = document.getElementById('btn');
+const ip_project = document.getElementById('project');
+const ip_task = document.getElementById('task');
+const ip_time = document.getElementById('time');
+btn.addEventListener('click', e => {
+    const newObj = {
+        project: ip_project.value,
+        task: ip_task.value,
+        timeSpent: ip_time.value,
+    }
+    timeSheetData.push(newObj);
+    console.log(timeSheetData); 
+})
+console.log(timeSheetData); 
 
 let rowNum = tbBody.getElementsByTagName('tr').length;
-for (let i = 0; i <= timeSheetData.length; i++) {
+for (let i = 0; i < timeSheetData.length; i++) {
     let newRow = tbBody.insertRow(rowNum);
     var cel1 = newRow.insertCell(0);
     var cel2 = newRow.insertCell(1);
@@ -39,7 +53,7 @@ for (let i = 0; i <= timeSheetData.length; i++) {
     cel3.innerHTML = timeSheetData[i].timeSpent;
     rowNum++;
 }
-// document.getElementById('tb').remove(0);
+tbBody.getElementsByTagName('tr')[0].remove();
 
 
 
