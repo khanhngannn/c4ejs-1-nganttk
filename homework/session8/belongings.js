@@ -1,24 +1,3 @@
-// const items = [];
-// let ipItem = document.getElementById('item');
-// let btnAdd = document.getElementById('btn_add');
-// let list = document.getElementById('list');
-// let count = -1
-// btnAdd.addEventListener('click', ()=>{
-//     items.push(ipItem.value);
-//     count++;
-//     console.log(items);
-//     updateView();
-// })
-// function updateView(){
-//     list.insertAdjacentHTML('beforeend', `<li>${items[count]}<button id="remove">remove</button></li>`)
-//     let btnRemove = document.getElementById('remove')
-//     btnRemove.addEventListener('click', ()=>{
-//         removeItem(count);
-//     })
-// }
-// function removeItem(count){
-//     items.splice(count,2);
-// }
 const items = [];
 let ipItem = document.getElementById('item');
 let btnAdd = document.getElementById('btn_add');
