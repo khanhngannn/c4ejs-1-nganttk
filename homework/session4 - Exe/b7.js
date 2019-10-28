@@ -65,6 +65,20 @@ products[3].providers = [
 ]
 console.log(products);
 let prov = prompt('Enter provider');
+let i;
+let result = []
+for (i = 0; i < products.length; i++) {
+  position = products[i].providers.indexOf(prov);
+  if (position>=0){
+      result.push(products[i])
+  }
+ }
+console.log(result);
+for(let i = 0; i < result.length; i++){
+    console.log(`Name: ${result[i].name}\nBrand: ${result[i].brand}\nPrice: ${result[i].price}\nColor: ${result[i].color}\nCategory: ${result[i].category}\nProvides: ${result[i].providers}`);
+}
+
+
 
 
 
