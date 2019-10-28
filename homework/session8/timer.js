@@ -4,7 +4,7 @@ let currentTime = 5;
 let btnStart = document.getElementById('btn_start');
 let btnStop = document.getElementById('btn_stop');
 
-let timer = setInterval(myTimer, 1000);
+// let timer = setInterval(myTimer, 1000);
 
 btnStart.addEventListener('click',()=>{
     btnStart.disabled = true;
@@ -17,6 +17,7 @@ btnStop.addEventListener('click',()=>{
     btnStart.disabled = false;
     clearInterval(timer);
     countTime.innerHTML = "Stopped";
+
 })
 
 function myTimer() {
@@ -25,5 +26,6 @@ function myTimer() {
     if(currentTime < 0){
         clearInterval(timer);
         countTime.innerHTML = "Time's up";
+    btnStart.disabled = false;
     }
 }
